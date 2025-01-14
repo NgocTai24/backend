@@ -1,0 +1,123 @@
+/* Header */
+.header {
+    border-bottom: 1px solid #ddd; /* Đặt viền dưới cho header */
+    padding: 10px 0; /* Padding cho header */
+}
+
+.header .inner-logo img {
+    max-height: 50px; /* Giới hạn chiều cao của logo */
+    max-width: 100%; /* Đảm bảo logo không bị phóng đại và giữ tỷ lệ */
+}
+
+/* Menu trong Header */
+.header .inner-menu > ul {
+    list-style: none; /* Loại bỏ dấu chấm trong danh sách */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Dùng flexbox để các mục menu nằm ngang */
+    align-items: center; /* Căn giữa các mục menu theo chiều dọc */
+    justify-content: flex-end; /* Căn phải các mục menu */
+    flex-wrap: wrap; /* Cho phép các mục menu xuống dòng nếu không đủ chỗ */
+}
+
+.header .inner-menu > ul > li {
+    margin-left: 20px; /* Khoảng cách giữa các mục menu */
+}
+
+
+/* Footer */
+footer.footer {
+    background-color: #333; /* Màu nền của footer */
+    color: white; /* Màu chữ trong footer */
+    text-align: center; /* Căn giữa nội dung */
+    padding: 20px 0; /* Padding cho footer */
+    font-size: 16px; /* Kích thước chữ */
+}
+
+/* Danh sách sản phẩm */
+.product-item {
+    border: 1px solid #ddd; /* Viền xung quanh sản phẩm */
+    border-radius: 8px; /* Bo tròn góc */
+    overflow: hidden; /* Ẩn nội dung tràn */
+    background-color: #fff; /* Màu nền trắng */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng hover */
+    display: flex;
+    flex-direction: column; /* Nội dung theo cột */
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* Dịch sản phẩm lên khi hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Tăng hiệu ứng đổ bóng khi hover */
+}
+
+.product-item .inner-image {
+    height: 180px; /* Chiều cao cố định */
+    overflow: hidden; /* Ẩn ảnh tràn */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.product-item .inner-image img {
+    width: auto;
+    height: 100%; /* Ảnh chiếm toàn bộ chiều cao */
+    display: block; /* Loại bỏ khoảng cách dưới ảnh */
+}
+
+.product-item .inner-content {
+    padding: 15px; /* Padding cho nội dung */
+    text-align: center; /* Căn giữa nội dung */
+    flex-grow: 1;
+}
+
+.product-item .inner-title {
+    font-size: 16px; /* Kích thước tiêu đề */
+    font-weight: bold; /* Chữ đậm */
+    margin-bottom: 10px; /* Khoảng cách dưới */
+    color: #333; /* Màu chữ tiêu đề */
+    text-transform: capitalize; /* Chữ cái đầu tiên viết hoa */
+}
+
+.product-item .inner-price-new {
+    font-size: 18px; /* Kích thước giá mới */
+    color: #27ae60; /* Màu chữ xanh lá */
+    font-weight: bold; /* Chữ đậm */
+}
+
+.product-item .inner-price-old {
+    font-size: 14px; /* Kích thước giá cũ */
+    color: #aaa; /* Màu chữ xám */
+    text-decoration: line-through; /* Gạch ngang giá cũ */
+    margin-left: 8px; /* Khoảng cách giữa giá cũ và giá mới */
+}
+
+.product-item .inner-discount {
+    background-color: #e74c3c; /* Màu nền đỏ */
+    color: #fff; /* Màu chữ trắng */
+    font-size: 14px; /* Kích thước chữ */
+    padding: 4px 8px; /* Padding cho giảm giá */
+    border-radius: 12px; /* Bo tròn góc */
+    display: inline-block; /* Hiển thị inline */
+    margin-top: 10px; /* Khoảng cách trên */
+}
+
+/* Bố cục danh sách sản phẩm */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Khoảng cách giữa các sản phẩm */
+    justify-content: center;
+}
+
+.product-item .inner-title,
+.product-item .inner-price-new,
+.product-item .inner-price-old,
+.product-item .inner-discount {
+    margin-bottom: 5px;
+}
+
+
+
+

@@ -1,0 +1,123 @@
+/* Header */
+.header {
+    background: #202020; /* Màu nền header */
+    padding: 10px 20px; /* Khoảng cách trên, dưới và hai bên */
+    position: sticky; /* Cố định header khi cuộn */
+    top: 0; /* Nằm trên cùng */
+    z-index: 999; /* Luôn hiển thị trên cùng */
+    color: #fff; /* Màu chữ trắng */
+    font-size: 20px; /* Kích thước chữ */
+    font-weight: bold; /* Chữ đậm */
+}
+
+/* Sidebar */
+.sider {
+    width: 180px; /* Chiều rộng sidebar */
+    background: #2b2b2b; /* Màu nền sidebar */
+    color: #fff; /* Màu chữ sidebar */
+    height: calc(100vh - 56px); /* Chiều cao toàn màn hình trừ header */
+    position: fixed; /* Sidebar cố định */
+    top: 56px; /* Nằm ngay dưới header */
+    left: 0; /* Căn trái */
+    display: flex;
+    flex-direction: column; /* Xếp nội dung theo chiều dọc */
+}
+
+.sider ul {
+    list-style: none; /* Loại bỏ ký hiệu danh sách */
+    padding: 0; /* Loại bỏ padding */
+    margin: 0; /* Loại bỏ margin */
+}
+
+.sider ul li a {
+    color: #fff; /* Màu chữ */
+    text-decoration: none; /* Loại bỏ gạch dưới */
+    display: block; /* Đặt link dạng block */
+    padding: 10px 15px; /* Khoảng cách trong mỗi mục */
+    border-bottom: 1px solid #444; /* Đường kẻ dưới */
+    transition: background 0.3s ease; /* Hiệu ứng khi hover */
+    font-size: 14px; /* Kích thước chữ */
+}
+
+.sider ul li a:hover {
+    background: #444; /* Màu nền khi hover */
+}
+
+/* Main Content */
+.main {
+    margin-left: 180px; /* Dịch nội dung sang phải, cách sidebar */
+    padding: 20px; /* Khoảng cách bên trong */
+    background: #e5e5e5; /* Màu nền nội dung */
+    min-height: calc(100vh - 56px); /* Chiều cao tối thiểu */
+    overflow-y: auto; /* Cuộn nội dung nếu cần */
+    font-size: 18px; /* Kích thước chữ nội dung */
+    color: #333; /* Màu chữ nội dung */
+}
+
+/* Tổng quan phần chính */
+.main h1 {
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+    font-size: 24px; /* Kích thước chữ lớn */
+    color: #000; /* Màu chữ */
+}
+
+/* Tối ưu giao diện */
+body {
+    margin: 0; /* Xóa khoảng cách mặc định */
+    font-family: Arial, sans-serif; /* Font chữ */
+}
+
+/* Show Alert */
+[show-alert] {
+    position: fixed;
+    top: 70px;
+    right: 15px;
+    z-index: 9999;
+  }
+  
+  [show-alert].alert-hidden {
+    animation-name: alert-hidden;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes alert-hidden {
+    from {
+      right: 15px;
+    }
+    to {
+      right: -100%;
+      display: none;
+    }
+  }
+
+  [show-alert] [close-alert] {
+    background: #ffffffc4;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+
+  /* End Show Alert */
+
+/* image-preview */
+.image-preview{
+  width: 150px;
+  height: auto;
+  margin-top: 15px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.image-preview[src=""]{
+  display: none;
+} 
+/* End image-preview */
+
